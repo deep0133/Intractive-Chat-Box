@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Rubik;
+}
+
+body {
+  background-color: hsl(228, 33%, 97%);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.card {
+  display: grid;
+  flex-direction: column;
+  padding: 20px;
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.grayish-blue {
+  color: hsl(211, 10%, 45%);
+}
+.moderate-blue {
+  color: hsl(238, 40%, 52%);
+}
+.bg-moderate-blue {
+  background-color: hsl(238, 40%, 52%);
+}
+.font-600 {
+  font-weight: 600;
+}
+
+/* Card Title Css :  Start */
+.card .row-1 .tr {
+  display: flex;
+  justify-content: space-between;
+}
+.card .title {
+  display: flex;
+  align-items: center;
+}
+.card .title img {
+  width: 35px;
+  height: 35px;
+}
+.card .title h4 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.card .row-1 .reply_in_title {
+  display: none;
+}
+/* Card Title Css :  End */
+
+/* Card Message Css :  Start */
+.message-box {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Card Message Css :  End */
+
+/* Card Reply_Section Css :  Start */
+.reply_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.reply_section .noOfMessage {
+  display: flex;
+  border: 1px solid wheat;
+  padding: 7px;
+  border-radius: 8px;
+}
+.reply_section .noOfMessage span {
+  padding: 5px;
+}
+.reply_section .noOfMessage p {
+  padding: 5px;
+}
+.reply_section .reply-box {
+  display: flex;
+  justify-content: center;
+}
+
+.reply_section .reply-box p {
+  margin-top: 4px;
+  margin-left: 4px;
+}
+
+/* footer css start */
+.footer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.footer .img{
+  display: none;
+}
+.footer textarea{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+.footer .img-btn{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+}
+.footer .img-btn img{
+  width: 40px;
+  height: 40px;
+}
+
+
+.footer button{
+  background: rgb(60, 60, 219);
+  padding: 10px 20px;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+}
+.footer button:focus{
+  border: none;
+}
+.footer button:hover{
+  background: rgb(25, 25, 232);
+}
+
+
+@media screen and (min-width: 500px) {
+  .container {
+    width: 85%;
+  }
+  .card {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 2px;
+  }
+  .card .row-1 .reply_in_title {
+    display: flex;
+    align-items: center;
+  }
+
+  .row-2 .reply-box {
+    display: none;
+  }
+
+  /* row-2 */
+  .row-2 {
+    order: 1;
+    grid-column: 1;
+  }
+
+  .row-1 {
+    order: 2;
+    grid-column: 11;
+    -ms-grid-column-span: 2;
+  }
+
+  .reply_section {
+    display: block;
+    margin-top: 2px;
+  }
+
+  .row-2 .noOfMessage {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0;
+  }
+  .row-2 .noOfMessage p {
+    padding: 12px 8px;
+  }
+
+  /* footer css start */
+.footer{
+  margin: auto;
+  margin-top: 15px; 
+  margin-bottom: 40px; 
+  display: grid;
+  grid-column: 3;
+  grid-auto-flow: column;
+  background-color: white;
+  padding-bottom: 20px;
+}
+.footer .img{
+  display: flex;
+  padding: 0;
+  grid-column-start: 0;
+  grid-column-end: 1;
+}
+.footer .img img{
+  display: block;
+  width: 40px;
+  height: 40px;  
+  margin: auto;
+  margin-top: 19px;
+}
+.footer>textarea{
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid wheat;
+  width: 80%;
+  grid-column-start: 1;
+  grid-column-end: 12;
+}
+.footer .img-btn img{
+  display: none;
+}
+.footer .img-btn button{
+  background: rgb(60, 60, 219);
+  border:none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  display: flex;
+  columns: 1;
+}
+.footer button:focus{
+  border: none;
+}
+.footer button:hover{
+  background: rgb(25, 25, 232);
+}
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 70%;
+  }
+  .footer>textarea{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .footer>textarea{
+    width: 90%;
+  }
+}
